@@ -1,6 +1,6 @@
 const indexController = {
     home_page_GET : (req, res) => {
-        res.end("Home Page");
+        res.render("index", {title: "Home"});
     }
 };
 

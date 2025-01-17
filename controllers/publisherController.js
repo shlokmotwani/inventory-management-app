@@ -1,6 +1,6 @@
 const publisherController = {
     all_publishers_GET: (req, res) => {
-      res.end("Publishers Page");
+     res.render("publishers", {title: "Publishers"});
     },
     add_new_publisher_GET: (req, res) => {
       res.end("Add a new Publisher Page");

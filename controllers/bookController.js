@@ -1,6 +1,22 @@
 const bookController = {
   all_books_GET: (req, res) => {
-    res.end("Books Page");
+    res.render("books", {
+      title: "Books",
+      books: [
+        {
+          id: 0,
+          title: "Atomic Habits",
+        },
+        {
+          id: 1,
+          title: "Harry Potter",
+        },
+        {
+          id: 2,
+          title: "The 5AM Club",
+        },
+      ],
+    });
   },
   add_new_book_GET: (req, res) => {
     res.end("Add a new book Page");
