@@ -4,7 +4,7 @@ const express = require("express");
 const indexRouter = require("./routes/indexRouter");
 const bookRouter = require("./routes/bookRouter");
 const publisherRouter = require("./routes/publisherRouter");
-const { populateDB } = require("./db/queries");
+const populateDB = require("./db/populateDB");
 const PORT = process.env.PORT || 3003;
 
 const app = express();
