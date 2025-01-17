@@ -4,7 +4,8 @@ const express = require("express");
 const indexRouter = require("./routes/indexRouter");
 const bookRouter = require("./routes/bookRouter");
 const publisherRouter = require("./routes/publisherRouter");
-const PORT = process.env.PORT || 3002;
+const { populateDB } = require("./db/queries");
+const PORT = process.env.PORT || 3003;
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.set("views", [
   path.join(__dirname, "views/books"),
   path.join(__dirname, "views/publishers"),
 ]);
+
+// populateDB();
 
 //app routes
 app.use("/", indexRouter);

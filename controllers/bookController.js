@@ -1,24 +1,14 @@
-const books = [
-  {
-    id: 0,
-    title: "Atomic Habits",
-  },
-  {
-    id: 1,
-    title: "Harry Potter",
-  },
-  {
-    id: 2,
-    title: "The 5AM Club",
-  },
-];
+const db = require("../db/queries");
 
 const bookController = {
-  all_books_GET: (req, res) => {
-    res.render("books", {
-      title: "Books",
-      books: books,
-    });
+  all_books_GET: async(req, res) => {
+    const books = await db.getAllBooks();
+    console.log(books);
+    res.end();
+    // res.render("books", {
+    //   title: "Books",
+    //   books: books,
+    // });
   },
   add_new_book_GET: (req, res) => {
     res.end("Add a new book Page");

@@ -1,19 +1,3 @@
-const publishers = [
-  {
-    id: 0,
-    title: "James Clear",
-  },
-  {
-    id: 1,
-    title: "JK Rowling",
-  },
-  {
-    id: 2,
-    title: "Robin Sharma",
-  },
-];
-
-
 const publisherController = {
     all_publishers_GET: (req, res) => {
      res.render("publishers", {
