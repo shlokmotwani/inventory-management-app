@@ -1,3 +1,5 @@
+const pool = require("./pool");
+
 async function populateDB() {
   const books = [
     "Harry Potter and The Philosopher's Stone",
