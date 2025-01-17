@@ -8,14 +8,10 @@
   <body>
     <%- include("./header.ejs") %>
 
-    <ul>
-      <% books.map(book => { %>
-      <li>
-        <%= book.title %>
-        <a href="<%" ="/books/" + book.id %>>Details</a>
-      </li>
-      <% }) %>
-    </ul>
+    <div>
+        <h1> <%=book.title%> </h1>
+         <span>ID : <%=book.id%> </span>
+    </div>
 
     <!-- <%- include("./footer.ejs") %> -->
   </body>

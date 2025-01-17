@@ -7,6 +7,15 @@
 </head>
 <body>
     <%- include("./header.ejs") %>
+    <h1>All Publishers</h1>
+    <ul>
+        <% publishers.map(publisher => { %>
+        <li>
+          <%= publisher.title %>
+          <a href= <%="/publishers/" + publisher.id %>>Details</a>
+        </li>
+        <% }) %>
+      </ul>
     
     <!-- <%- include("./footer.ejs") %> -->
 </body>
