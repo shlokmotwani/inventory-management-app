@@ -12,11 +12,12 @@
     <ul>
       <% books.map(book => { %>
       <li>
-        <%= book.title %>
-        <a href= <%="/books/" + book.id %>>Details</a>
+        <%= book.book_title %>
+        <a href= <%="/books/" + book.book_id %>>Details</a>
       </li>
       <% }) %>
     </ul>
+    <a href="/books/create">Add a New Book</a>
 
     <!-- <%- include("./footer.ejs") %> -->
   </body>
